@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BarCodeService.h"
+#import "Inventory.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<ZBarReaderViewDelegate, BarCodeServiceDelegate>
 
 
 @end
