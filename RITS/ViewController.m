@@ -37,6 +37,20 @@
 {
     [skuLabel setText:[NSString stringWithFormat:@"%i",(int)[item sku]]];
     [artistLabel setText:[item artist]];
+    [titleLabel setText:[item title]];
+    [qualityLabel setText:[NSString stringWithFormat:@"(%@)",[item quality]]];
+    [priceLabel setText:[NSString stringWithFormat:@"$%0.2f",[item price]]];
+    if ((int)[item quantity] == 0) {
+        [quantityLabel setTextColor:[UIColor redColor]];
+
+        [quantityLabel setText:@"No units available!!"];
+    }
+    else
+    {
+        [quantityLabel setTextColor:[UIColor colorWithHexString:@"458B00"]];
+        [quantityLabel setText:[NSString stringWithFormat:@"(%d units available)",(int)[item quantity]]];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {

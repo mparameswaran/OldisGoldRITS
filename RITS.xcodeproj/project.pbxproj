@@ -24,6 +24,7 @@
 		D0AF4F561C75AF7100C09E54 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AF4F551C75AF7100C09E54 /* QuartzCore.framework */; };
 		D0AF4F581C75AF8200C09E54 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AF4F571C75AF8200C09E54 /* libiconv.tbd */; };
 		D0C547A51C835C40005F97C7 /* BarCodeService.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C547A41C835C40005F97C7 /* BarCodeService.m */; };
+		D0C547A81C83C1EB005F97C7 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C547A71C83C1EB005F97C7 /* UIColor+Expanded.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,8 @@
 		D0AF4F571C75AF8200C09E54 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		D0C547A31C835C40005F97C7 /* BarCodeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarCodeService.h; sourceTree = "<group>"; };
 		D0C547A41C835C40005F97C7 /* BarCodeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarCodeService.m; sourceTree = "<group>"; };
+		D0C547A61C83C1EB005F97C7 /* UIColor+Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Expanded.h"; sourceTree = "<group>"; };
+		D0C547A71C83C1EB005F97C7 /* UIColor+Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Expanded.m"; sourceTree = "<group>"; };
 		D3B1DDBB0156D4C5E6C0C444 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -183,6 +186,8 @@
 		D0AF4F0E1C75AC9200C09E54 = {
 			isa = PBXGroup;
 			children = (
+				D0C547A61C83C1EB005F97C7 /* UIColor+Expanded.h */,
+				D0C547A71C83C1EB005F97C7 /* UIColor+Expanded.m */,
 				D037B7AD1C82E2F700A9233B /* libzbar.a */,
 				D037B7971C82E2AA00A9233B /* ZBarSDK */,
 				D0A48F0E1C75EC6C00E4F8DE /* RITS-PrefixHeader.pch */,
@@ -437,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C547A81C83C1EB005F97C7 /* UIColor+Expanded.m in Sources */,
 				D0C547A51C835C40005F97C7 /* BarCodeService.m in Sources */,
 				D037B7B11C83582D00A9233B /* Inventory.m in Sources */,
 				D0AF4F221C75AC9200C09E54 /* ViewController.m in Sources */,
