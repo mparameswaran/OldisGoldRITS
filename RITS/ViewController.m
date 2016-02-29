@@ -18,6 +18,7 @@
     IBOutlet UILabel *priceLabel;
     IBOutlet UILabel *qualityLabel;
     IBOutlet UILabel *quantityLabel;
+    IBOutlet UIActivityIndicatorView *activity;
     UITextView *resultText;
    
 }
@@ -27,14 +28,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    CGAffineTransform transform = CGAffineTransformMakeScale(1.75f, 1.75f);
+    activity.transform = transform;
+
 
 
 }
 -(void)didFailFetchingInventoryItem:(NSError *)error{
+    [activity stopAnimating];
     NSLog(@"%@",error.description);
 }
 -(void)didFetchInventorySuccessfully:(Inventory *)item
 {
+    [activity stopAnimating];
     [skuLabel setText:[NSString stringWithFormat:@"%i",(int)[item sku]]];
     [artistLabel setText:[item artist]];
     [titleLabel setText:[item title]];
@@ -92,8 +98,10 @@
     
     // EXAMPLE: do something useful with the barcode data
     NSString *barcode = symbol.data;
+    [activity startAnimating];
     BarCodeService *barcodeService = [[BarCodeService alloc]initWithDelegate:self];
     [barcodeService fetchInventory:barcode];
+    
     
     resultImage.image =
     [info objectForKey: UIImagePickerControllerOriginalImage];
