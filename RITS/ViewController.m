@@ -36,11 +36,15 @@
 }
 -(void)didFailFetchingInventoryItem:(NSError *)error{
     [activity stopAnimating];
+    [artistLabel setTextColor:[UIColor redColor]];
+    [artistLabel setText:@"SERVER ERROR"];
+    [titleLabel setText:@"Unable to fetch inventory information"];
     NSLog(@"%@",error.description);
 }
 -(void)didFetchInventorySuccessfully:(Inventory *)item
 {
     [activity stopAnimating];
+    [artistLabel setTextColor:[UIColor blackColor]];
     [skuLabel setText:[NSString stringWithFormat:@"%i",(int)[item sku]]];
     [artistLabel setText:[item artist]];
     [titleLabel setText:[item title]];
