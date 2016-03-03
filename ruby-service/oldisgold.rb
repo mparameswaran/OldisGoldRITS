@@ -7,7 +7,7 @@ set :port, 5678
 #set :bind, '0.0.0.0'
 
 get '/' do
-	"#{Time.now}"
+	"Hello world #{Time.now}"
 end
 
 
