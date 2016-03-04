@@ -7,7 +7,7 @@ set :port, 5678
 #set :bind, '0.0.0.0'
 
 get '/' do
-	"Hello world #{Time.now}"
+	"Ruby Sinatra Service for Old is Gold record store is running. The time now is #{Time.now}"
 end
 
 
